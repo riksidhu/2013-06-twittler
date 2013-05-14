@@ -1,27 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <script src="jquery.js"></script>
-    <script src="data_generator.js"></script>
-  </head>
-  <body>
-    <script>
+    
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="jquery.js"></script>
+        <script src="data_generator.js"></script>
+        <script type="text/javascript" src="twittler_new.js"></script>
+    </head>
+    
+    <body>
+        <article>
+             <h1>Chat Room</h1>
 
-      $(document).ready(function(){
-        var $body = $('body');
-        $body.html('');
+             <h2>All Chat's</h2>
 
-        var index = streams.home.length - 1;
-        while(index >= 0){
-          var tweet = streams.home[index];
-          var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
-          $tweet.appendTo($body);
-          index -= 1;
-        }
+        </article>
+        <section id="chat_room_section">
+            <div id="chats"></div>
+            <button id="refresh_button">Refresh</button>
+        </section>
+    </body>
 
-      });
-
-    </script>
-  </body>
 </html>
