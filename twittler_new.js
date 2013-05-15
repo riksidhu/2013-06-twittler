@@ -17,9 +17,9 @@ $(document).ready(function () {
         //event.preventDefault();
         //clearInterval(setTimeout(draw,1000));
         //setTimeout(draw,1000);
-        for(var i = 0 ; i<=10; i++){
+        
             $("#msg").remove();
-        }
+        
         
         return draw();
     });
